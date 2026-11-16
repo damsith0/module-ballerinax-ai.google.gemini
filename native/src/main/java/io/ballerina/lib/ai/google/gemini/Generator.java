@@ -36,12 +36,13 @@ public class Generator {
                 // the module version. It must be updated whenever the major version in
                 // gradle.properties changes, or the lookup fails at runtime with
                 // "Value creator object is not available for: ballerinax/ai.google.gemini".
-                new Module("ballerinax", "ai.google.gemini", "0"), "generateLlmResponse", null,
+                new Module("ballerinax", "ai.google.gemini", "1"), "generateLlmResponse", null,
                 modelProvider.get(StringUtils.fromString("httpClient")),
                 modelProvider.get(StringUtils.fromString("apiKey")),
                 modelProvider.get(StringUtils.fromString("modelType")),
                 modelProvider.get(StringUtils.fromString("temperature")),
                 modelProvider.get(StringUtils.fromString("maxTokens")),
+                modelProvider.get(StringUtils.fromString("thinkingLevel")),
                 prompt, expectedResponseTypedesc);
     }
 }
